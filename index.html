@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>secureForm - Simple Client Side Form Validation</title>
+		<link rel="stylesheet" type="text/css" href="css/secureForm.css" />
+		<script data-main="js/main" src="js/lib/require.js"></script>
+	</head>
+	<body>
+		<div id="example-form-cont">
+			<form method="post" id="secureForm" action="process/test.php">
+				<ul class="example-form">
+					<li>
+						<label for="name">Name*: </label> 
+						<input type="text" name="name" data-label="Your Name" class="sf-required" />
+					</li>
+					<li>
+						<label for="email">Email*: </label> 
+						<input type="text" name="email" data-label="Your Email" class="sf-required sf-email" />
+					</li>
+					<li>
+						<label for="phone">Phone: </label> 
+						<input type="text" name="phone" />
+					</li>
+					<li>
+						<label for="username">Username*: </label> 
+						<input type="text" name="username" data-label="Your Username:" class="sf-required" />
+					</li>
+					<li>
+						<label for="password1">Password*: </label> 
+						<input type="password" name="password1" data-label="Your Password" class="sf-required sf-compare sf-numbers-letters" />
+					</li>
+					<li>
+						<label for="password2">Repeat Password*: </label> 
+						<input type="password" name="password2" data-label="Password Confirmation" class="sf-required sf-compare sf-numbers-letters" />
+					</li>
+					<li>
+						<p>
+							For security purposes enter the code below into the security code box: <span id="sf-insert-captcha"> </span>:
+						</p>
+					</li>
+					<li>
+						<label for="captcha">Security Code: </label> <input type="text" name="Security Code" id="sf-captcha" class="sf-required" />
+					</li>
+					<li>
+						<input type="submit" value="Submit" />
+					</li>
+				</ul>
+				<div id="sf-error-box">
+					
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
