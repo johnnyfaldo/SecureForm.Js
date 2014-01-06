@@ -20,31 +20,47 @@ require.config({
 
 requirejs([
 	'jquery',
+	'underscore',
 	'app/elements',
-	'app/required',
 	'app/errors',
-	'underscore'
-	], function($, elements, required, errors, _) {
+	'app/required',
+	'app/captcha',
+	'app/compare'
+	], function( $ , _ , elements , errors , required , captcha , compare ) {
 	
 		$(function() {
 			
+			//on form submit
 			$(elements.form).submit(function() {
 				
 				//clear errors from previous submissions
-				errors.clear();
+				errors.reset();
 				
-				var checks = [
+				//array of checks to run
+				var validations = [
 					required,
-				]
-				
-				_.each(checks,function(check) {
+					captcha,
+					compare
+				],  validationErrors = 0;
 					
-					check();
+				//loop through validations
+				_.each(validations,function(validate) {
 					
-				});
-																			
-				//return false
-				return false;
+					//validation returns true for no errors and false for erros
+					if(!validate()) {
+						//if returned false increment validation errors
+						validationErrors++; 
+					}
+					
+				});					
+											
+				//if no errors submit form
+				if(validationErrors < 1) {
+					return true;
+				}else {
+					//else don't submit form
+					return false;
+				}
 				
 			});
 			

@@ -20,9 +20,7 @@ define([
 	};
 	
 	return {
-		
-		list:errors,
-		
+				
 		add:function(error)  {
 			errors.push(error);
 		},
@@ -36,8 +34,14 @@ define([
 		},
 		
 		display:function(suffix) {
-			suffix = '<span class="sf-suffix">'+suffix+'</span>';
-			$(elements.errorBox).html(suffix+buildList(errors));
+			var suffix = '<span class="sf-suffix">'+suffix+'</span>', 
+				prefix = '<br /><br />';
+			$(elements.errorBox).append(suffix+buildList(errors)+prefix);
+		},
+		
+		reset:function() {
+			this.clear();
+			$(elements.errorBox).html('');
 		},
 				
 	};
