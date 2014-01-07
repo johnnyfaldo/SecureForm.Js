@@ -25,8 +25,10 @@ requirejs([
 	'app/errors',
 	'app/required',
 	'app/captcha',
-	'app/compare'
-	], function( $ , _ , elements , errors , required , captcha , compare ) {
+	'app/compare',
+	'app/email',
+	'app/confirm'
+	], function( $ , _ , elements , errors , required , captcha , compare , email , confirm ) {
 	
 		$(function() {
 			
@@ -40,7 +42,9 @@ requirejs([
 				var validations = [
 					required,
 					captcha,
-					compare
+					compare,
+					email,
+					confirm
 				],  validationErrors = 0;
 					
 				//loop through validations

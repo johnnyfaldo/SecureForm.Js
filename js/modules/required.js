@@ -26,7 +26,7 @@ define([
 					//increment errors
 					errorsFound ++;
 					//add error class
-					$this.addClass('sf-blank');
+					$this.addClass('sf-required-error');
 					//use label if defined
 					if(label) {
 						errors.add(label);
@@ -36,7 +36,7 @@ define([
 					}
 				}else {
 					//remove error class
-					$this.removeClass('sf-blank');
+					$this.removeClass('sf-required-error');
 				}
 				
 			});

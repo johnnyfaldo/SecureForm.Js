@@ -10,7 +10,9 @@ define({
 	insertCaptcha: '#sf-insert-captcha',
 	captcha:       '#sf-captcha',
 	errorBox:      '#sf-error-box',
-	comparisons:   '.sf-compare',
+	comparison:    '.sf-compare',
+	email:         '.sf-email',
+	confirm:       '.sf-confirm',
 	
 	setElement: function(e,value) {
 		this[e] = value;

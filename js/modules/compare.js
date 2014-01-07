@@ -10,7 +10,7 @@ define([
 	'app/errors'
 ],function( $ , _ , elements , errors ) {
 	
-	var $comparisons = $(elements.comparisons);
+	var $comparisons = $(elements.comparison);
 	
 	return function() {
 		
@@ -21,12 +21,10 @@ define([
 		
 		//build array of comparison values
 		$comparisons.each(function() {
-			errors.clear();
 			//add values
 			comparisons.push($(this).val());
 			//add labels or names 
 			labels.push($(this).data('label') || $(this).prop('name'));
-			
 		});
 		
 		//remove duplicates, if 1 value remains then all values are the same
@@ -40,6 +38,8 @@ define([
 			errors.clear();
 			errors.add(labels.join(', '));
 			errors.display('The following fields must match: ');
+			//add error class
+			$(elements.comparison).addClass('sf-comparison-error');
 			return false;
 		}else {
 			//all match - validation passed 

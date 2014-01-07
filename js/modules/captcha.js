@@ -27,7 +27,7 @@ define([
 		if(parseInt($(elements.captcha).val()) === captcha) {
 			//it's correct 
 			//remove error class
-			$(elements.captcha).removeClass('sf-captcha-wrong');
+			$(elements.captcha).removeClass('sf-captcha-error');
 			return true;
 		}else {
 			//incorrect - log and display error
@@ -35,7 +35,7 @@ define([
 			errors.add('Security code was incorrect');
 			errors.display('Error: ');
 			//add error class
-			$(elements.captcha).addClass('sf-captcha-wrong');
+			$(elements.captcha).addClass('sf-captcha-error');
 			return false;
 		}
 		
