@@ -3,11 +3,12 @@
  * Errors module
  */
 
-define([
-	'jquery',
-	'app/elements',
-	'underscore'
-	],function( $ , elements, _ ) {
+secureForm.errors = (function( elements ) {
+
+	//check elements have been passed
+	if(elements === false) {
+		console.log('Module: Errors','Error: elements object was not passed through');
+	}
 	
 	var errors = [];
 	
@@ -30,6 +31,7 @@ define([
 		},
 		
 		clear:function() {
+			console.log('errors - clear');
 			errors = [];
 		},
 		
@@ -46,4 +48,4 @@ define([
 				
 	};
 	
-});
+})(secureForm.elements || false);

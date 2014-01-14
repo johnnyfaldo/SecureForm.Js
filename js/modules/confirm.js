@@ -3,11 +3,7 @@
  * Confirmation Validation Module
  */
 
-define([
-	'jquery',
-	'app/elements',
-	'app/errors'
-],function( $ , elements , errors ) {
+secureForm.confirm = (function( elements , errors ) {
 				
 	return function() {
 		
@@ -44,4 +40,4 @@ define([
 		
 	};	
 	
-});
+})(secureForm.elements, secureForm.errors);

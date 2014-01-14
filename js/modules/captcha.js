@@ -3,12 +3,7 @@
  * Captcha Module 
  */
 
-define([
-	'jquery',
-	'underscore',
-	'app/elements',
-	'app/errors'
-],function( $ , _ , elements , errors ) {
+secureForm.captcha = (function( elements , errors ) {
 	
 	//store the security code
 	var captcha;
@@ -41,4 +36,4 @@ define([
 		
 	};
 	
-});
+})( secureForm.elements , secureForm.errors );

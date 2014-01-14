@@ -3,14 +3,10 @@
  * sfRequired Module of secureForm 
  */
 
-define([
-	'jquery',
-	'app/elements',
-	'app/errors'
-	], function( $ , elements , errors ) {
-					
-		return function() {
-						
+secureForm.required = (function( elements , errors ) {
+	
+		return function() {		
+		
 			var $e = $(elements.required),
 				errorsFound = 0;
 			
@@ -58,4 +54,4 @@ define([
 	
 		};
 	
-});
+})( secureForm.elements , secureForm.errors );

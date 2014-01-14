@@ -3,7 +3,7 @@
  * sfElements module 
  */
 
-define({	
+secureForm.elements = {	
 
 	form:          '#secureForm',
 	required:	   '.sf-required',
@@ -18,4 +18,4 @@ define({
 		this[e] = value;
 	},
 	
-});
+};

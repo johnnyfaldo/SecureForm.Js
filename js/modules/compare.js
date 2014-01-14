@@ -3,12 +3,7 @@
  * Compare Module
  */
 
-define([
-	'jquery',
-	'underscore',
-	'app/elements',
-	'app/errors'
-],function( $ , _ , elements , errors ) {
+secureForm.compare = (function( elements , errors ) {
 	
 	var $comparisons = $(elements.comparison);
 	
@@ -48,4 +43,4 @@ define([
 		
 	};
 	
-});
+})( secureForm.elements , secureForm.errors );
