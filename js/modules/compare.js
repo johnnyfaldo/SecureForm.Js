@@ -5,7 +5,10 @@
 
 secureForm.compare = (function( elements , errors ) {
 	
-	var $comparisons = $(elements.comparison);
+	var $comparisons;
+	$(function() {
+		$comparisons = $(elements.comparison);
+	});
 	
 	return function() {
 		
