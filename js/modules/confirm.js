@@ -4,12 +4,12 @@
  */
 
 secureForm.confirm = (function( elements , errors ) {
-				
+			
 	return function() {
-		
+										
 		//vars
-		var $confirm 	= $(elements.confirm),
-		errorsFound = 0;
+		var $confirm = $(elements.confirm),
+			errorsFound = 0;
 		
 		//loop through confirms
 		$confirm.each(function() {
@@ -30,14 +30,13 @@ secureForm.confirm = (function( elements , errors ) {
 		//check for errors 
 		if(errorsFound > 0) {
 			//errors found display and return false
-			console.log('test');
 			errors.display('The following must be checked: ');
 			return false;
 		}else {
 			//no errors - passed
 			return true;
 		}
-		
+				
 	};	
 	
 })(secureForm.elements, secureForm.errors);

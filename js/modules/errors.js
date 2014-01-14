@@ -31,7 +31,6 @@ secureForm.errors = (function( elements ) {
 		},
 		
 		clear:function() {
-			console.log('errors - clear');
 			errors = [];
 		},
 		

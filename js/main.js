@@ -17,14 +17,14 @@
 				var validations = [
 					required,
 					captcha,
-					compare,
 					email,
-				    confirm
+				    confirm,
+				    compare
 				],  validationErrors = 0;
 					
 				//loop through validations
 				_.each(validations,function(validate) {
-										
+															
 					//validation returns true for no errors and false for erros
 					if(!validate()) {
 						//if returned false increment validation errors
@@ -46,5 +46,5 @@
 		});
 	
 })( secureForm.elements , secureForm.errors , secureForm.required , secureForm.captcha ,
-	secureForm.compare , secureForm.email , secureForm.compare);
+	secureForm.compare , secureForm.email , secureForm.confirm);
 
