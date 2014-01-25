@@ -14,7 +14,10 @@ secureForm.captcha = (function( elements , errors ) {
 	}();
 	
 	//on set up insert captcha code 
-	$(elements.insertCaptcha).html(captcha);
+	$(function() {
+		$(elements.insertCaptcha).html(captcha);
+	});
+
 	
 	return function() {
 		
