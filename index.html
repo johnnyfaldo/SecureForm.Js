@@ -1,79 +1,103 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>secureForm - Simple Client Side Form Validation</title>
-		<link rel="stylesheet" type="text/css" href="css/secureForm.css" />
-		<link rel="stylesheet" type="text/css" href="css/example.css" />
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script type="text/javascript" src="js/lib/underscore.js"></script>
-		<!-- modules -->
-		<!--
-		<script type="text/javascript" src="js/modules/init.js"></script>
-		<script type="text/javascript" src="js/modules/elements.js"></script>
-		<script type="text/javascript" src="js/modules/errors.js"></script>
-		
-		<script type="text/javascript" src="js/modules/required.js"></script>
-		<script type="text/javascript" src="js/modules/captcha.js"></script>
-		<script type="text/javascript" src="js/modules/compare.js"></script>
-		<script type="text/javascript" src="js/modules/confirm.js"></script>
-		<script type="text/javascript" src="js/modules/email.js"></script>
-		
-		<script type="text/javascript" src="js/main.js"></script>
-		-->
-		
-		<script type="text/javascript" src="js/secureForm.min.js"></script>
-
-	</head>
-	<body>
-		<div id="example-form-cont">
-			<form method="post" id="secureForm" action="process/test.php">
-				<ul class="example-form">
-					<li>
-						<label for="name">Name*: </label> 
-						<input type="text" name="name" data-label="Your Name" class="sf-required" />
-					</li>
-					<li>
-						<label for="email">Email*: </label> 
-						<input type="text" name="email" data-label="Your Email" class="sf-required sf-email" />
-					</li>
-					<li>
-						<label for="phone">Phone: </label> 
-						<input type="text" name="phone" />
-					</li>
-					<li>
-						<label for="username">Username*: </label> 
-						<input type="text" name="username" data-label="Your Username:" class="sf-required" />
-					</li>
-					<li>
-						<label for="password1">Password*: </label> 
-						<input type="password" name="password1" data-label="Your Password" class="sf-required sf-compare" />
-					</li>
-					<li>
-						<label for="password2">Repeat Password*: </label> 
-						<input type="password" name="password2" data-label="Password Confirmation" class="sf-required sf-compare" />
-					</li>
-					<li>
-						<p>
-							For security purposes enter the code below into the security code box: <span id="sf-insert-captcha"> </span>:
-						</p>
-					</li>
-					<li>
-						<label for="captcha">Security Code: </label> <input type="text" name="Security Code" id="sf-captcha" class="sf-required" />
-					</li>
-					<li>
-						<label for="confirmation"> Confirm something: </label> <input type="checkbox" data-label="A Confirmation" name="confirm_one" class="sf-confirm" />
-					</li>
-					<li>
-						<label for="confirmation"> Confirm another: </label> <input type="checkbox" data-label="Some Other Confirmation" name="confirm_two" class="sf-confirm" />
-					</li>
-					<li>
-						<input type="submit" value="Submit" />
-					</li>
-				</ul>
-				<div id="sf-error-box">
-					
-				</div>
-			</form>
-		</div>
-	</body>
+    <head>
+        <title>secureForm 2- Simple Client Side Form Validation</title>
+        <!-- styles -->
+        <link rel="stylesheet" type="text/css" href="css/secureForm.css" />
+        <link rel="stylesheet" type="text/css" href="css/example.css" />
+        
+        <!-- html5 shiv -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js"></script>
+        <!-- jquery -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <!-- underscore -->
+        <script type="text/javascript" src="js/lib/underscore.js"></script>
+        
+        <!-- app -->
+        <script type="text/javascript" src="js/modules/init.js"></script>
+        <script type="text/javascript" src="js/modules/elements.js"></script>
+        <script type="text/javascript" src="js/modules/options.js"></script>
+        <script type="text/javascript" src="js/modules/errors.js"></script>
+        <script type="text/javascript" src="js/modules/required.js"></script>
+        <script type="text/javascript" src="js/modules/captcha.js"></script>
+        <script type="text/javascript" src="js/modules/compare.js"></script>
+        <script type="text/javascript" src="js/modules/confirm.js"></script>
+        <script type="text/javascript" src="js/modules/email.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript">
+            secureForm.options({
+               "testing":"test128",
+               "elements": {
+               }
+            });
+        </script>
+    </head>
+    <body>
+        
+        <header>
+            <img class="logo" alt="secureFormjs logo" src="images/logo.jpg" />
+            <h1>simple client side form validation</h1>
+        </header>
+        
+        <section id="introduction">
+            <h2>hello</h2>
+            <p>Secureform.Js provides out of the box front end form validation. try the form below to see it in action.For full documentation and usage: <a href="#">GITHUBLINK</a>.</p>
+            <a class="author" href="#">Author: John Faldo</a>
+        </section>  
+        
+        <div class="heading">
+             <h3>example</h3>
+             <p class="note">* denotes required</p>
+        </div>
+       
+        <main>
+            <aside id="sf-error-box"></aside>
+            <form method="post" id="secureForm" action="thanks.php">
+                <ul class="example-form">
+                    <li>
+                        <label for="name">Name*: </label> 
+                        <input type="text" name="name" data-label="Your Name" class="sf-required" />
+                    </li>
+                    <li>
+                        <label for="email">Email*: </label> 
+                        <input type="text" name="email" data-label="Your Email" class="sf-required sf-email" />
+                    </li>
+                    <li>
+                        <label for="phone">Phone: </label> 
+                        <input type="text" name="phone" />
+                    </li>
+                    <li>
+                        <label for="username">Username*: </label> 
+                        <input type="text" name="username" data-label="Your Username:" class="sf-required" />
+                    </li>
+                    <li>
+                        <label for="password1">Password*: </label> 
+                        <input type="password" name="password1" data-label="Your Password" class="sf-required sf-compare" />
+                    </li>
+                    <li>
+                        <label for="password2"><small>confirm</small> Password*: </label> 
+                        <input type="password" name="password2" data-label="Password Confirmation" class="sf-required sf-compare" />
+                    </li>
+                    <li class="instruction">
+                        <p>
+                            For security purposes enter the following code into the security code box: <span id="sf-insert-captcha"> </span>:
+                        </p>
+                    </li>
+                    <li>
+                        <label for="captcha">Security Code: </label> <input type="text" name="Security Code" id="sf-captcha" class="sf-required" />
+                    </li>
+                    <li class="line"></li>
+                    <li class="confirmation">
+                        <label for="confirmation"> Confirm something: </label> <input type="checkbox" data-label="A Confirmation" name="confirm_one" class="sf-confirm" />
+                    </li>
+                    <li class="submit">
+                        <input type="submit" value="Submit" />
+                    </li>
+                </ul>
+            </form>
+            
+        </main>
+        
+    </body>
+    
 </html>

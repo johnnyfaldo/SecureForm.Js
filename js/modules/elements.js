@@ -1,6 +1,6 @@
 /*
  * sf-elements.js
- * sfElements module 
+ * sfElements module
  */
 
 secureForm.elements = {	

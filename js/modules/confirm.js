@@ -6,7 +6,9 @@
 secureForm.confirm = (function( elements , errors ) {
 			
 	return function() {
-										
+		
+		errors.clear();
+						
 		//vars
 		var $confirm = $(elements.confirm),
 			errorsFound = 0;

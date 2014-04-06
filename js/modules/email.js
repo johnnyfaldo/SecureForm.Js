@@ -34,6 +34,8 @@ secureForm.email = (function( elements , errors ) {
 				errorsFound ++;
 				//add error class
 				$(this).addClass('sf-email-error');
+			}else {
+				$(this).removeClass('sf-email-error');
 			}
 			
 		});
@@ -41,7 +43,11 @@ secureForm.email = (function( elements , errors ) {
 		//check for errors 
 		if(errorsFound > 0) {
 			//atleast one error
-			errors.display('Error: You have entered an invalid email address.');
+			errors.clear();
+			errors.add('You have entered an invalid email address.');
+			errors.display('Error: ');
+		}else {
+			return true;
 		}
 		
 		

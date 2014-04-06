@@ -30,9 +30,7 @@ secureForm.compare = (function( elements , errors ) {
 		
 		//if there's more than 1 value then all comparison fields didn't match		
 		if(unique.length > 1 && (comparisons[0] !== '' || comparisons[0] !== undefined)) {
-			//console.log(labels);
 			//not all fields matched 
-			//log and display error
 			errors.clear();
 			errors.add(labels.join(', '));
 			errors.display('The following fields must match: ');
@@ -41,6 +39,7 @@ secureForm.compare = (function( elements , errors ) {
 			return false;
 		}else {
 			//all match - validation passed 
+			$(elements.comparison).removeClass('sf-comparison-error');
 			return true;
 		}
 		

@@ -2,12 +2,11 @@
  * Main file for Require.js configures and loads in modules
  */
 
-(function( elements , errors , required , captcha , compare , email , confirm ) {
+(function( options , elements , errors , required , captcha , compare , email , confirm ) {
 	
 		//
 		$(function() {
 			
-			//on form submit
 			$(elements.form).submit(function() {
 				
 				//clear errors from previous submissions
@@ -31,13 +30,13 @@
 						validationErrors++;
 					}
 					
-				});					
-											
+				});				
+					
 				//if no errors submit form
 				if(validationErrors < 1) {
 					return true;
 				}else {
-					//else don't submit form
+					errors.scrollToErrors();
 					return false;
 				}
 				
@@ -45,6 +44,6 @@
 			
 		});
 	
-})( secureForm.elements , secureForm.errors , secureForm.required , secureForm.captcha ,
+})( secureForm.options , secureForm.elements , secureForm.errors , secureForm.required , secureForm.captcha ,
 	secureForm.compare , secureForm.email , secureForm.confirm);
 
