@@ -169,6 +169,6 @@ secureForm.elements = {
 	
 };
 ```
-
+Although you can alter the name of the class/id - classes must remain classes and ids should remain ids - else you may recieve unexpected behavior. 
 
 
