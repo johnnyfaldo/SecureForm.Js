@@ -212,13 +212,6 @@ main {
   font-family: raspoutine;
   font-size: 13px;
 }
-body {
-  margin: 0px;
-  padding: 100px 0px 0px 0px;
-}
-ul {
-  list-style-type: none;
-}
 #example-form-cont {
   width: 500px;
   margin: 0 auto;
@@ -233,7 +226,7 @@ ul {
   padding: 8px 0px 8px 0px;
 }
 .example-form li label {
-  width: 135px;
+  width: 155px;
   float: left;
 }
 .example-form li input[type=text],
