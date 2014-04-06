@@ -1,5 +1,5 @@
 /*
- * Main file for Require.js configures and loads in modules
+ * Pull modules together and run validations
  */
 
 (function( options , elements , errors , required , captcha , compare , email , confirm ) {

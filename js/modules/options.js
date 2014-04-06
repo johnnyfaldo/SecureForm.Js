@@ -4,10 +4,7 @@
 
 secureForm.options = (function( elements ) {
 	
-	var options = {
-		
-		"testing":"124"
-				
+	var options = {				
 	};
 		
 	return function(params) {
@@ -20,16 +17,10 @@ secureForm.options = (function( elements ) {
 				for( element in params[key] ) {
 					if( elements.hasOwnProperty( element ) ) {
 						elements[element] = params[key][element];
-					}else {
-						console.log(key,params[key]);
 					}
 				}
 			}
 		}
-			
-		console.log(options);
-		console.log(elements);
-						
 
 	};
 	

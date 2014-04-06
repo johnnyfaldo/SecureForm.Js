@@ -154,7 +154,6 @@ secureForm.errors = (function( elements ) {
 	
 })(secureForm.elements || false);
 /*
- * sf-require.js 
  * sfRequired Module of secureForm 
  */
 
