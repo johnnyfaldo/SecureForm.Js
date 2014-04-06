@@ -400,7 +400,7 @@ secureForm.email = (function( elements , errors ) {
 	
 })( secureForm.elements , secureForm.errors );
 /*
- * Main file for Require.js configures and loads in modules
+ * Main file .
  */
 
 (function( options , elements , errors , required , captcha , compare , email , confirm ) {
