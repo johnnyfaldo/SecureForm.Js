@@ -15,16 +15,16 @@ http://www.optdesign.co.uk/secure-form
 
 SecureForm.js can be used to validate the following types of form input: 
 
-* Required fields
-* Fields that must match e.g password/email confirmation 
-* Email address syntax validation
-* Check box confirmation - e.g user must tick terms and conditions check box
+* ***Required fields***
+* ***Fields that must match*** e.g password/email confirmation 
+* ***Email address syntax validation***
+* ***Check box confirmation*** - e.g user must tick terms and conditions check box
 
 Additional features include:
 
-* Basic bot prevention - security code generation & validation
-* Error box - display errors in form input to user to assist them in filling it out correctly 
-* Turn text fields a different colour when submitted with errors depending on the type of error - customisable.
+* ***Basic bot prevention***- security code generation & validation
+* ***Error box*** - display errors in form input to user to assist them in filling it out correctly 
+* ***Colour Coding*** Turn text fields a different colour when submitted with errors depending on the type of error - customisable.
 
 ##Usage
 
@@ -106,7 +106,7 @@ This example input is a required (`.sf-required`) field, left empty SecureForm.j
 
 The actual error message isn't configurable, although if desired you could edit the hard coded error message in the correlating module in js/modules and re build. 
 
-Using the error box is optional, simply don't include a `#sf-error-box` container. 
+Using the error box is optional, simply don't include a `#sf-error-box` container if you don't want to use that feature.
 
 Another form of error indication SecureForm.js uses is colour coded error colours applied to `<input>` fields when errors are found. You can select what colours to use for each errors in css/secureForm.css; the defaults are as such:
 
@@ -129,3 +129,46 @@ Another form of error indication SecureForm.js uses is colour coded error colour
 ```
 
 These error classes are applied to the input field when an error is found relating to that field. You could of course use these to apply any type of style to the element other than just colours/borders.
+
+###Options
+
+You can set options using:
+
+```
+secureForm.options({
+  //key value options
+});
+```
+
+####Custom Elements 
+
+The default elements are stored in an object, that you can modify using:
+
+
+```
+secureForm.options({
+  elements: {
+    'required':'.my-required-field'
+  }
+});
+```
+
+The above example will alter SecureForm.js to take `.my-required-fields` class to identify required fields rather than the default `.sf-required`. Below is the elements objects showing the keys to use to override the defaults:
+
+```
+secureForm.elements = {	
+
+	form:          '#secureForm',
+	required:	     '.sf-required',
+	insertCaptcha: '#sf-insert-captcha',
+	captcha:       '#sf-captcha',
+	errorBox:      '#sf-error-box',
+	comparison:    '.sf-compare',
+	email:         '.sf-email',
+	confirm:       '.sf-confirm',
+	
+};
+```
+
+
+
