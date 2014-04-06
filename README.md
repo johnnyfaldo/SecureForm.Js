@@ -139,6 +139,7 @@ secureForm.options({
   //key value options
 });
 ```
+There currently aren't many options! Just custom elements: 
 
 ####Custom Elements 
 
