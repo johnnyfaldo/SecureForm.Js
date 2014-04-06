@@ -92,8 +92,22 @@ Example form using SecureForm.js:
 </main>
 ```
 
-Basic:
+####Errors 
 
-Secureform.Js can work out of the box with no configuration, simply add relevant classes to elements in your form to validate users input. 
+Use data-label to include the name of the form element when an error is found. 
 
-####Form
+```
+<input type="text" name="username" data-label="Your Username" class="sf-required" />
+```
+
+This example input is a required (`.sf-required`) field, left empty SecureForm.js will display the following error to the user in `#sf-error-box`:
+
+***The following are required fields:*** Your Username
+
+The actual error message isn't configurable, although if desired you could edit the hard coded error message in the correlating module in js/modules and re build. 
+
+Using the error box is optional, simply don't include a `#sf-error-box` container. 
+
+Another form of error indication SecureForm.js uses is colour coded error colours applied to `<input>` fields when errors are found. You can select what colours to use for each errors in css/secureForm.css; the defaults are as such:
+
+
