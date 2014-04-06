@@ -110,4 +110,22 @@ Using the error box is optional, simply don't include a `#sf-error-box` containe
 
 Another form of error indication SecureForm.js uses is colour coded error colours applied to `<input>` fields when errors are found. You can select what colours to use for each errors in css/secureForm.css; the defaults are as such:
 
+```
+.sf-required-error{
+  background:red;
+}
+.sf-captcha-error {
+  background:blue;
+}
+.sf-email-error {
+  background:purple;
+}
+.sf-comparison-error {
+  background:yellow;
+}
+.sf-confirm-error {
+  border:1px solid red;
+}
+```
 
+These error classes are applied to the input field when an error is found relating to that field. You could of course use these to apply any type of style to the element other than just colours/borders.
