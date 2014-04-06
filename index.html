@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
         <title>secureForm 2- Simple Client Side Form Validation</title>
         <!-- styles -->
-        <link rel="stylesheet" type="text/css" href="css/secureForm.css" />
-        <link rel="stylesheet" type="text/css" href="css/example.css" />
+        <link rel="stylesheet" href="css/secureForm.css" />
+        <link rel="stylesheet" href="css/example.css" />
         
         <!-- html5 shiv -->
         <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js"></script>
@@ -14,21 +15,9 @@
         <script type="text/javascript" src="js/lib/underscore.js"></script>
         
         <!-- app -->
-        <script type="text/javascript" src="js/modules/init.js"></script>
-        <script type="text/javascript" src="js/modules/elements.js"></script>
-        <script type="text/javascript" src="js/modules/options.js"></script>
-        <script type="text/javascript" src="js/modules/errors.js"></script>
-        <script type="text/javascript" src="js/modules/required.js"></script>
-        <script type="text/javascript" src="js/modules/captcha.js"></script>
-        <script type="text/javascript" src="js/modules/compare.js"></script>
-        <script type="text/javascript" src="js/modules/confirm.js"></script>
-        <script type="text/javascript" src="js/modules/email.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
-        <script type="text/javascript">
+        <script src="js/secureForm.min.js"></script>
+        <script>
             secureForm.options({
-               "testing":"test128",
-               "elements": {
-               }
             });
         </script>
     </head>
@@ -41,8 +30,9 @@
         
         <section id="introduction">
             <h2>hello</h2>
-            <p>Secureform.Js provides out of the box front end form validation. try the form below to see it in action.For full documentation and usage: <a href="#">GITHUBLINK</a>.</p>
-            <a class="author" href="#">Author: John Faldo</a>
+            <p>Secureform.Js provides out of the box front end form validation. try the form below to see it in action.For full documentation and usage: 
+                <a href="https://github.com/johnnyfaldo/SecureForm.Js/">GITHUBLINK</a>.</p>
+            <a class="author" title="email me" href="mailto:johnfaldo@gmail.com">Author: John Faldo</a>
         </section>  
         
         <div class="heading">
