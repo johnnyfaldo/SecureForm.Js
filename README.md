@@ -1,4 +1,99 @@
 SecureForm.Js
 =============
 
-Simple client side form validation
+Simple client side form validation in Javascript. 
+
+###Dependencies
+
+Secureform.js requires jQuery http://jquery.com/ , and underscore.js http://underscorejs.org/
+
+###Example
+
+http://www.optdesign.co.uk/secure-form
+
+##Features
+
+SecureForm.js can be used to validate the following types of form input: 
+
+* Required fields
+* Fields that must match e.g password/email confirmation 
+* Email address syntax validation
+* Check box confirmation - e.g user must tick terms and conditions check box
+
+Additional features include:
+
+* Basic bot prevention - security code generation & validation
+* Error box - display errors in form input to user to assist them in filling it out correctly 
+* Turn text fields a different colour when submitted with errors depending on the type of error - customisable.
+
+##Usage
+
+SecureForm.js has a set of default ids/classes that when applied to the relating elements in your form, will work out of the box with no configuration - however you can also customise it to work with your own chosen class/ids. Each element can have multiple SecureForm.js classes.
+
+####Default Elements
+
+* `<form>`:                    #secureForm
+* Required `<input>`:          .sf-required
+* Comparison `<input>`:        .sf-comparison
+* Email validation `<input>`:  .sf-email
+* Security code container:   #sf-insert-captcha
+* Secutiry code `<input>`':     #sf-captcha
+* Error box container:       #sf-error-box 
+
+Example form using SecureForm.js: 
+
+```
+<main>
+  <aside id="sf-error-box"></aside>
+  <form method="post" id="secureForm" action="thanks.php">
+      <ul class="example-form">
+          <li>
+              <label for="name">Name*: </label> 
+              <input type="text" name="name" data-label="Your Name" class="sf-required" />
+          </li>
+          <li>
+              <label for="email">Email*: </label> 
+              <input type="text" name="email" data-label="Your Email" class="sf-required sf-email" />
+          </li>
+          <li>
+              <label for="phone">Phone: </label> 
+              <input type="text" name="phone" />
+          </li>
+            <li>
+                <label for="username">Username*: </label> 
+                <input type="text" name="username" data-label="Your Username:" class="sf-required" />
+            </li>
+            <li>
+                <label for="password1">Password*: </label> 
+                <input type="password" name="password1" data-label="Your Password" class="sf-required sf-compare" />
+            </li>
+            <li>
+                <label for="password2"><small>confirm</small> Password*: </label> 
+                <input type="password" name="password2" data-label="Password Confirmation" class="sf-required sf-compare" />
+            </li>
+            <li class="instruction">
+                <p>
+                    For security purposes enter the following code into the security code box: <span id="sf-insert-captcha"> </span>:
+                </p>
+            </li>
+            <li>
+                <label for="captcha">Security Code: </label> <input type="text" name="Security Code" id="sf-captcha" class="sf-required" />
+            </li>
+            <li class="line"></li>
+            <li class="confirmation">
+                <label for="confirmation"> Confirm something: </label> <input type="checkbox" data-label="A Confirmation" name="confirm_one" class="sf-confirm" />
+            </li>
+            <li class="submit">
+                <input type="submit" value="Submit" />
+            </li>
+        </ul>
+    </form>
+    
+</main>
+```
+
+Basic:
+
+Secureform.Js can work out of the box with no configuration, simply add relevant classes to elements in your form to validate users input. 
+
+####Form
